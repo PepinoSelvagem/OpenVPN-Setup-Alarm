@@ -1,6 +1,8 @@
 OpenVPN-Setup
 ============
-
+Original script made by StarshipEngineer
+This is only a script for Arch linux arm
+=============================================================================================
 Note: Ongoing research into fixing Easy-RSA dependency in Raspbian Stretch is being conducted
 =============================================================================================
 
@@ -20,23 +22,8 @@ Prerequisites
 -------------
 
 To follow this guide and use the script to setup OpenVPN, you will need to have
-a Raspberry Pi Model B or later with an ethernet port, an SD or microSD card
-(depending on the model) with Raspbian installed, a power adapter appropriate to
- the power needs of your model, and an ethernet cable to connect your Pi to your
-router or gateway. It is recommended that you use a fresh image of Raspbian
-Jessie Lite or Wheezy from https://raspberrypi.org/downloads, but if you don't,
-be sure to make a backup image of your existing installation before proceeding.
-You will also need to setup your Pi with a static IP address (see either source
-  1 or 2 at the bottom of this Readme) and have your router forward port 1194
-  (varies by model & manufacturer; consult your router manufacturer's
-  documentation to do this). You should also find your Pi's local IP address on
-  your network and the public IP address of your network and write them down
-  before beginning. Enabling SSH on your Pi is also highly recommended, so that
-  you can run a very compact headless server without a monitor or keyboard and
-  be able to access it even more conveniently (This is also covered by source 2)
-  . And last but not least, you will need to be logged in under the default
-  user pi,  so be sure to change pi's user password from the default.
-
+any raspberry pi, a micro sd card or regular sd card depending on your model and
+the Arch linux for the raspberry pi, that you can download right here: https://archlinuxarm.org/platforms/armv6/raspberry-pi (rp1) or https://archlinuxarm.org/platforms/armv7/broadcom/raspberry-pi-2 (rp2 & rp3).
 Server-Side Setup
 -----------------
 
@@ -44,22 +31,21 @@ You can download the OpenVPN setup script directly through the terminal or SSH u
 Git. If you don't already have it, update your APT repositories and install it:
 
 ```shell
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install git
+sudo pacman -Syu
+sudo pacman -S git
 ```
 
 Then download the latest setup script via the command line with:
 
 ```shell
 cd
-git clone git://github.com/StarshipEngineer/OpenVPN-Setup
+git clone git://github.com/PepinoSelvagem/OpenVPN-Setup-Alarm
 ```
 
 Execute the script with:
 
 ```shell
-cd OpenVPN-Setup
+cd OpenVPN-Setup-Alarm
 sudo chmod +x openvpnsetup.sh
 sudo ./openvpnsetup.sh
 ```
@@ -161,7 +147,7 @@ free to leave a comment and send me an email and I'll get back to you as soon as
 
 I also encourage discussion of issues, solutions, and ideas on the RaspberryPi.org forum thread for the project [here.](https://www.raspberrypi.org/forums/viewtopic.php?f=36&t=137240&p=911599&hilit=OpenVPN#p911599) I'd love for users to have the opportunity to discuss their ideas with each other!
 
-Contributions
+Contributions- Originaly made by StarshipEngenieer
 -------------
 
 I'm also interested in improving this script, and will be adding features to it
@@ -176,6 +162,7 @@ to buy me a gallon of gas, I would be very grateful!
 
 If you decide to do so, please also consider supporting OpenVPN; they have produced a wonderful open-source product, and all credit for it goes to their community and their hard work. this project is merely an automated
 front-end for its installation on Raspbian (written more for my benefit than anyone else's).
+Donate PepinoSelvagem:
 
 Thanks
 ------
