@@ -2,10 +2,7 @@ OpenVPN-Setup
 ============
 Original script made by StarshipEngineer
 This is only a script for Arch linux arm
-=============================================================================================
-Note: Ongoing research into fixing Easy-RSA dependency in Raspbian Stretch is being conducted
-=============================================================================================
-
+============
 About
 -----
 
@@ -20,13 +17,14 @@ would like to set up OpenVPN on Raspbian Wheezy, use the Wheezy branch.
 
 Prerequisites
 -------------
-
+-------------
 To follow this guide and use the script to setup OpenVPN, you will need to have
 any raspberry pi, a micro sd card or regular sd card depending on your model and
 the Arch linux for the raspberry pi, that you can download right here: https://archlinuxarm.org/platforms/armv6/raspberry-pi (rp1) or https://archlinuxarm.org/platforms/armv7/broadcom/raspberry-pi-2 (rp2 & rp3).
+
 Server-Side Setup
 -----------------
-
+-----------------
 You can download the OpenVPN setup script directly through the terminal or SSH using
 Git. If you don't already have it, update your APT repositories and install it:
 
