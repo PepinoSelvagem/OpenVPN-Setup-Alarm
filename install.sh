@@ -13,7 +13,7 @@ fi
 #DOWNLOAD/INSTALL OPENVPN & EASY-RSA
 #Install openvpn
 echo "Updating, Upgrading, and Installing..."
-apt-get -y install openvpn
+pacman -S install openvpn
 
 #Install easy-rsa v3.0.5
 cd /etc/openvpn
